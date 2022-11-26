@@ -25,8 +25,11 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
-   assets:
+  assets:
     - assets/images/logo.png
     - assets/images/machupicchu.png
+    - assets/images/coliseo-de-roma.jpg
+    - assets/images/taj-mahal.jpg
+    - assets/images/piramegipto.jpg
 
-   uses-material-design: true
+  uses-material-design: true
