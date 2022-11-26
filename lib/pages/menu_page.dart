@@ -6,6 +6,8 @@ import 'package:Androidlab/pages/tajmahal_page.dart';
 import 'package:Androidlab/pages/colromano_page.dart';
 import 'package:Androidlab/pages/piramegipto_page.dart';
 
+import 'about_page.dart';
+
 
 class MenuPage extends StatefulWidget {
 
@@ -87,8 +89,22 @@ class _MenuPageState extends State<MenuPage> {
                 onTap: (){
                   FirebaseAuth.instance.signOut();
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const LoginPage()));
+
                 },
-              )
+              ),
+
+              ListTile(
+                leading: const Icon(Icons.abc, size: 20, color: Colors.black,),
+                title: const Text("About", style: TextStyle( fontSize: 20)),
+                textColor: Colors.black,
+                onTap: (){
+                  FirebaseAuth.instance.signOut();
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const AboutPage()));
+
+                },
+              ),
+
+
             ],
           )
         ],
