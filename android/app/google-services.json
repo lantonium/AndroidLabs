@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "981620266647",
+    "project_id": "androidlab-e2a05",
+    "storage_bucket": "androidlab-e2a05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981620266647:android:8ded978cb3c382d393bbd2",
+        "android_client_info": {
+          "package_name": "com.androidlab.androidlabs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981620266647-360if2rqcgk8hvch8v5sjdh5a33ifgi4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTOQSMLaWhic6c1eej7SR0oo-zBfrhiz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981620266647-360if2rqcgk8hvch8v5sjdh5a33ifgi4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "981620266647-g5ohd474sda5o40mphonse7r5ok8kk96.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.androidlab.androidlabs"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
