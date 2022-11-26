@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
     msg = mensaje(context);
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+        padding: const EdgeInsets.all(20),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
