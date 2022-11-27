@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:Androidlab/pages/menu_page.dart';
 
-
-
 class PoiPage extends StatefulWidget {
   const PoiPage({Key? key}) : super(key: key);
 
@@ -47,8 +45,7 @@ class _PoiPageState extends State<PoiPage> {
                   width: double.infinity,
                   height: 200,
               ) ,
-
-    const SizedBox(height: 15),
+              const SizedBox(height: 15),
               const Text('Horario: 07:00 a 18:00 Horas',
                   textAlign: TextAlign.left, style: TextStyle(fontSize: 20)),
               const SizedBox(height: 10),
@@ -79,21 +76,20 @@ class _PoiPageState extends State<PoiPage> {
                   style: TextStyle(fontSize: 14)),
               const SizedBox(height: 15),
 
-              TextButton(
-                  style: TextButton.styleFrom(
-                    textStyle: const TextStyle(fontSize: 16),
-                  ),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MenuPage()));
-
-                  },
-                  child: const Text('Regresar')),
+              // TextButton(
+              //     style: TextButton.styleFrom(
+              //       textStyle: const TextStyle(fontSize: 16),
+              //     ),
+              //     onPressed: () {
+              //       Navigator.push(context, MaterialPageRoute(builder: (context) => MenuPage()));
+              //     },
+              //     child: const Text('Regresar')),
             ],
           ),
         ),
       ),
+        bottomNavigationBar: const menuInferior(),
     )
     );
-
   }
 }

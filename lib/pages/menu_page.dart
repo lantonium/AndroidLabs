@@ -5,6 +5,7 @@ import 'package:Androidlab/pages/poi_page.dart';
 import 'package:Androidlab/pages/tajmahal_page.dart';
 import 'package:Androidlab/pages/colromano_page.dart';
 import 'package:Androidlab/pages/piramegipto_page.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'about_page.dart';
 
@@ -103,8 +104,6 @@ class _MenuPageState extends State<MenuPage> {
 
                 },
               ),
-
-
             ],
           )
         ],
@@ -120,27 +119,27 @@ class menuInferior extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       backgroundColor: Colors.blue,
-      selectedItemColor: Colors.orange,
+      selectedItemColor: Colors.black54,
       unselectedItemColor: Colors.white,
       items: const [
         BottomNavigationBarItem(
-            icon: Icon(Icons.home,size: 30,),
+            icon: Icon(FontAwesomeIcons.houseChimney,size: 25),
             label: "Inicio"
         ),
         BottomNavigationBarItem(
-            icon: Icon(Icons.account_box,size: 30,),
-            label: "Perfil"),
+            icon: Icon(FontAwesomeIcons.star,size: 25),
+            label: "Favoritos"),
         BottomNavigationBarItem(
-            icon: Icon(Icons.favorite,size: 30,),
-            label: "Favoritos")
+            icon: Icon(FontAwesomeIcons.info,size: 25),
+            label: "Acerca de..")
       ],
       onTap: (indice){
         if(indice==0){
           Navigator.push(context, MaterialPageRoute(builder: (contetx)=> MenuPage()));
         }else if(indice==1){
-          Navigator.push(context, MaterialPageRoute(builder: (contetx)=> PoiPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (contetx)=> const PoiPage()));
         }else{
-          Navigator.push(context, MaterialPageRoute(builder: (contetx)=> MenuPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (contetx)=> const AboutPage()));
         }
       },
 

@@ -53,9 +53,13 @@ class _AboutPageState extends State<AboutPage> {
                 const Text('Developers',
                     textAlign: TextAlign.left, style: TextStyle(fontSize: 20)),
                 const SizedBox(height: 25),
+                const Icon(
+                  Icons.flutter_dash, size: 30, color: Colors.black,),
                 const Text( 'Luis Antonio Gonzalez',
                     textAlign: TextAlign.left, style: TextStyle(fontSize: 15)),
                 const SizedBox(height: 15),
+                const Icon(
+                  Icons.flutter_dash, size: 30, color: Colors.black,),
                 const Text( 'John Alexander Restrepo',
                     textAlign: TextAlign.left, style: TextStyle(fontSize: 15)),
 
@@ -67,7 +71,7 @@ class _AboutPageState extends State<AboutPage> {
                 const Text('droidlabs2022@gmail.com',
                     textAlign: TextAlign.left, style: TextStyle(fontSize: 15)),
                 const SizedBox(height: 15),
-                const Text('All rights reserved',
+                const Text('All rights reserved ©',
                     textAlign: TextAlign.left, style: TextStyle(fontSize: 15)),
                 const SizedBox(height: 15),
                 const Text('2022',
@@ -86,6 +90,7 @@ class _AboutPageState extends State<AboutPage> {
             ),
           ),
         ),
+        bottomNavigationBar: const menuInferior(),
       ),
     );
   }

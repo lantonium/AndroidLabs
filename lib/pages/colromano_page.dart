@@ -76,19 +76,20 @@ class _ColromanoPageState extends State<ColromanoPage> {
                         'cuadrados.',
                     style: TextStyle(fontSize: 14)),
                 const SizedBox(height: 15),
-                TextButton(
-                    style: TextButton.styleFrom(
-                      textStyle: const TextStyle(fontSize: 16),
-                    ),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => MenuPage()));
-                    },
-                    child: const Text('Regresar')),
+                // TextButton(
+                //     style: TextButton.styleFrom(
+                //       textStyle: const TextStyle(fontSize: 16),
+                //     ),
+                //     onPressed: () {
+                //       Navigator.push(context,
+                //           MaterialPageRoute(builder: (context) => MenuPage()));
+                //     },
+                //     child: const Text('Regresar')),
               ],
             ),
           ),
         ),
+        bottomNavigationBar: const menuInferior(),
       ),
     );
   }

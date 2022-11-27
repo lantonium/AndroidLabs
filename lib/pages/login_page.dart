@@ -11,6 +11,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool isChecked = false;
   final _email = TextEditingController();
   final _password = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
@@ -45,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    msg = mensaje(context);
+    //msg = mensaje(context);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -105,6 +106,23 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   child: const Text('Iniciar sesion'),
                 ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Recordarme",style: TextStyle(color: Colors.blueGrey),),
+                    Checkbox(
+                      value: isChecked,
+                      onChanged: (value){
+                        isChecked = !isChecked;
+                        setState(() {
+
+                        });
+                      },
+                    ),
+                  ],
+                ),
+
                 TextButton(
                     style: TextButton.styleFrom(
                       textStyle: const TextStyle(fontSize: 16),
