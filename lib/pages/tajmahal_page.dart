@@ -31,14 +31,22 @@ class _TajmahalPageState extends State<TajmahalPage> {
         appBar: AppBar(
           title: const Text('Detalle Sitio Turistico'),
         ),
-        body: Center(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
           child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               const SizedBox(height: 15),
               const Text('Taj-Mahal', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               const SizedBox(height: 30),
-              const Image(image: AssetImage("assets/images/taj-mahal.jpg")),
+              Container(
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
+                    image: const DecorationImage (image: AssetImage("assets/images/taj-mahal.jpg"), fit: BoxFit.cover)
+                ),
+                width: double.infinity,
+                height: 200,
+              ) ,
+
               const SizedBox(height: 15),
               const Text('Horario: 09:00 a 16:00 Horas',
                   textAlign: TextAlign.left, style: TextStyle(fontSize: 20)),

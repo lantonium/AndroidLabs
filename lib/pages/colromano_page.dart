@@ -30,7 +30,8 @@ class _ColromanoPageState extends State<ColromanoPage> {
         appBar: AppBar(
           title: const Text('Detalle Sitio Turistico'),
         ),
-        body: Center(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -39,11 +40,19 @@ class _ColromanoPageState extends State<ColromanoPage> {
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 30),
-                const Image(
-                    image: AssetImage("assets/images/coliseo-de-roma.jpg")),
+              Container(
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
+                    image: const DecorationImage (image: AssetImage("assets/images/coliseo-de-roma.jpg"), fit: BoxFit.cover)
+                ),
+                width: double.maxFinite,
+                height: 180,
+              ) ,
                 const SizedBox(height: 15),
-                const Text('Horario: 09:00 a 17:00 Horas',
-                    textAlign: TextAlign.left, style: TextStyle(fontSize: 20)),
+                Text('Horario: 09:00 a 17:00 Horas',
+                    textAlign: TextAlign.left, style: TextStyle(
+                      fontSize: 20,
+
+                    )),
                 const SizedBox(height: 10),
                 const Text( 'Temperatura:'
                     'El clima romano es  suave y templado, '

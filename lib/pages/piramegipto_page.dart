@@ -31,14 +31,21 @@ class _PiramegiptoPageState extends State<PiramegiptoPage> {
         appBar: AppBar(
           title: const Text('Detalle Sitio Turistico'),
         ),
-        body: Center(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
           child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               const SizedBox(height: 15),
               const Text('Piramides de Egipto', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               const SizedBox(height: 30),
-              const Image(image: AssetImage("assets/images/piramegipto.jpg")),
+          Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(18),
+          image: const DecorationImage (image: AssetImage("assets/images/piramegipto.jpg"), fit: BoxFit.cover)
+          ),
+          width: double.maxFinite,
+          height: 180,
+          ) ,
               const SizedBox(height: 15),
               const Text('Horario: 24 Horas',
                   textAlign: TextAlign.left, style: TextStyle(fontSize: 20)),
@@ -70,8 +77,9 @@ class _PiramegiptoPageState extends State<PiramegiptoPage> {
             ],
           ),
         ),
-          ),
-    ),
+  ),
+    )
     );
+
   }
 }
