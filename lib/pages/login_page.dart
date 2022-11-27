@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:Androidlab/pages/register_page.dart';
 import 'package:Androidlab/pages/menu_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,6 +18,42 @@ class _LoginPageState extends State<LoginPage> {
   final _password = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
   late final mensaje msg;
+  late Box box1;
+
+  @override
+  void initState(){
+    super.initState();
+    createBox();
+    getData();
+  }
+
+  void createBox() async{
+    box1 = await Hive.openBox('logindata');
+  }
+  void getData() async{
+    if(box1.get('_email')!=null){
+      _email.text = box1.get('_email');
+      isChecked = true;
+      setState(() {
+
+      });
+    }
+    if(box1.get('_password')!=null){
+      _password.text = box1.get('_password');
+      isChecked = true;
+      setState(() {
+
+      });
+    }
+  }
+
+  void login(){
+    //Box = (this.context);
+    if(isChecked){
+      box1.put('email', _email.text);
+      box1.put('password', _password.text);
+    }
+  }
 
   void validarUsuario() async {
     mensaje(this.context);
@@ -103,11 +140,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 ElevatedButton(
                   onPressed: () {
+                    login();
                     validarUsuario();
                   },
                   child: const Text('Iniciar sesion'),
                 ),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -123,7 +160,6 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-
                 TextButton(
                     style: TextButton.styleFrom(
                       textStyle: const TextStyle(fontSize: 16),
@@ -145,6 +181,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
 
 class mensaje {
   late BuildContext context;
