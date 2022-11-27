@@ -1,3 +1,4 @@
+import 'package:Androidlab/modelo/login_local.dart';
 import 'package:flutter/material.dart';
 import 'package:Androidlab/pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,6 +11,8 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform
   );
   await Hive.initFlutter();
+  Hive.registerAdapter(LoginLocalAdapter());
+  //await Hive.openBox(box1);
     runApp(const MyApp());
 }
 
