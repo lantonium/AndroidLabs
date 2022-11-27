@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:Androidlab/pages/register_page.dart';
 import 'package:Androidlab/pages/menu_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:hive/hive.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
