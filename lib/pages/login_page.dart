@@ -4,7 +4,6 @@ import 'package:Androidlab/pages/menu_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -17,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
   final _email = TextEditingController();
   final _password = TextEditingController();
   FirebaseAuth auth = FirebaseAuth.instance;
-  late final mensaje msg;
+  late mensaje msg;
   late Box box1;
 
   @override
@@ -48,7 +47,6 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void login(){
-    //Box = (this.context);
     if(isChecked){
       box1.put('email', _email.text);
       box1.put('password', _password.text);
@@ -184,7 +182,7 @@ class _LoginPageState extends State<LoginPage> {
 
 
 class mensaje {
-  late BuildContext context;
+  late BuildContext context ;
   mensaje(this.context);
   void mostrarMensaje(String mensaje) {
     final pantalla = ScaffoldMessenger.of(context);

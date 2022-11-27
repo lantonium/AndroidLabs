@@ -16,8 +16,8 @@ class Usuario {
   Usuario.fromJson(Map<String, dynamic> data)
   : _id= data['id'],
     _nombres= data['nombres'],
-    _email= data['email'],
-    _password= data['password'];
+    _email= data['email'] as String,
+    _password= data['password'] as String;
 
 
   get id => _id;
