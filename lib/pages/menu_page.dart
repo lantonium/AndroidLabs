@@ -123,15 +123,14 @@ class menuInferior extends StatelessWidget {
       unselectedItemColor: Colors.white,
       items: const [
         BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.houseChimney,size: 25),
-            label: "Inicio"
+            icon: Icon(FontAwesomeIcons.houseChimney,size: 25),label: ""
         ),
         BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.star,size: 25),
-            label: "Favoritos"),
+            icon: Icon(FontAwesomeIcons.star,size: 25),label: ""
+        ),
         BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.info,size: 25),
-            label: "Acerca de..")
+            icon: Icon(FontAwesomeIcons.info,size: 25),label: ""
+        )
       ],
       onTap: (indice){
         if(indice==0){

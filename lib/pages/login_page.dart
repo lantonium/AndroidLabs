@@ -64,8 +64,6 @@ class _LoginPageState extends State<LoginPage> {
             context, MaterialPageRoute(builder: (context) => MenuPage()));
       }
     } on FirebaseAuthException catch (e) {
-      //most-rarMensaje("${e.code}");
-
       if (e.code == "invalid-email") {
         msg.mostrarMensaje("El formato del Email no es correcto.");
       } else if (e.code == "user-not-found") {
@@ -82,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    //msg = mensaje(context);
+    msg = mensaje(context);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20),
