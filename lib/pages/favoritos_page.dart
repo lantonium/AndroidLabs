@@ -1,6 +1,7 @@
+import 'package:Androidlab/repository/boxes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-//import 'package:hive_flutter/adapters.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'menu_page.dart';
 
 class FavoritosPage extends StatefulWidget {
@@ -33,13 +34,13 @@ class _FavoritosPageState extends State<FavoritosPage> {
       bottomNavigationBar: const menuInferior(),
     );
   }
-/*
+
   Widget ListaFavoritos(){
 
-    return ValueListenableBuilder<Box<PaseadoresLocal>>(
+    return ValueListenableBuilder<Box<poiesLocal>>(
         valueListenable: Boxes.boxFavoritos().listenable(),
         builder: (context, box, _){
-          final lista = box.values.toList().cast<PaseadoresLocal>();
+          final lista = box.values.toList().cast<poiesLocal>();
           return ListView.builder(
               padding: EdgeInsets.all(30),
               itemCount: lista.length,
@@ -58,8 +59,8 @@ class _FavoritosPageState extends State<FavoritosPage> {
                         title: Text(lista[i].nombre ?? "", style: const TextStyle(fontSize: 20, color: Colors.black, )),
                         subtitle: Text(lista[i].ciudad ?? ""),
                         onTap: (){
-                          //datosPaseador paseadorNew= datosPaseador(lista[i].id ?? "", lista[i].nombre ?? "", lista[i].ciudad ?? "", lista[i].contacto ?? "", lista[i].foto ?? "", lista[i].perfil ?? "");
-                          //Navigator.push(context, MaterialPageRoute(builder: (context)=>DetallePaseador(paseadorNew)));
+                          //datospoi poiNew= datospoi(lista[i].id ?? "", lista[i].nombre ?? "", lista[i].ciudad ?? "", lista[i].contacto ?? "", lista[i].foto ?? "", lista[i].perfil ?? "");
+                          //Navigator.push(context, MaterialPageRoute(builder: (context)=>Detallepoi(poiNew)));
                         },
                         onLongPress: (){
                           setState(() {
@@ -73,5 +74,13 @@ class _FavoritosPageState extends State<FavoritosPage> {
               }
           );
         });
-  }*/
+  }
+}
+
+class poiesLocal {
+  get foto => null;
+  get nombre => null;
+  get ciudad => null;
+  void delete() {}
+
 }

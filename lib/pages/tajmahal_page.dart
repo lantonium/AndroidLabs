@@ -15,13 +15,6 @@ class _TajmahalPageState extends State<TajmahalPage> {
     super.initState();
   }
 
-/* Future<void> pasarPage() async {
-    Future.delayed(const Duration(seconds: 8), () async {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const LoginPage()));
-    });
-  }
-*/
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -69,15 +62,12 @@ class _TajmahalPageState extends State<TajmahalPage> {
                   style: TextStyle(fontSize: 14)),
               const SizedBox(height: 15),
 
-              // TextButton(
-              //     style: TextButton.styleFrom(
-              //       textStyle: const TextStyle(fontSize: 16),
-              //     ),
-              //     onPressed: () {
-              //       Navigator.push(context, MaterialPageRoute(builder: (context) => MenuPage()));
-              //
-              //     },
-              //     child: const Text('Regresar')),
+              const ListTile(
+                leading: Icon(Icons.pin_drop, size: 30, color: Colors.black,),
+                title: Text("Ubicacion", style: TextStyle( fontSize: 16)),
+                textColor: Colors.black,
+              ),
+
             ],
           ),
         ),

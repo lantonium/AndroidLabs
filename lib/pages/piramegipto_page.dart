@@ -15,13 +15,6 @@ class _PiramegiptoPageState extends State<PiramegiptoPage> {
     super.initState();
   }
 
-/* Future<void> pasarPage() async {
-    Future.delayed(const Duration(seconds: 8), () async {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const LoginPage()));
-    });
-  }
-*/
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -64,16 +57,11 @@ class _PiramegiptoPageState extends State<PiramegiptoPage> {
                   'Construidas como criptas reales para los faraones a partir de 2630–2610 a. C.1​, con bloques de piedra revestidos de caliza, eran a la vista, grandes construcciones de color blanco.',
                   style: TextStyle(fontSize: 14)),
               const SizedBox(height: 15),
-
-              // TextButton(
-              //     style: TextButton.styleFrom(
-              //       textStyle: const TextStyle(fontSize: 16),
-              //     ),
-              //     onPressed: () {
-              //       Navigator.push(context, MaterialPageRoute(builder: (context) => MenuPage()));
-              //
-              //     },
-              //     child: const Text('Regresar')),
+              const ListTile(
+                leading: Icon(Icons.pin_drop, size: 30, color: Colors.black,),
+                title: Text("Ubicacion", style: TextStyle( fontSize: 16)),
+                textColor: Colors.black,
+              ),
             ],
           ),
         ),

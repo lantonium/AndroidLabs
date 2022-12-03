@@ -48,7 +48,7 @@ class _ColromanoPageState extends State<ColromanoPage> {
                 height: 180,
               ) ,
                 const SizedBox(height: 15),
-                Text('Horario: 09:00 a 17:00 Horas',
+                const Text('Horario: 09:00 a 17:00 Horas',
                     textAlign: TextAlign.left, style: TextStyle(
                       fontSize: 20,
 
@@ -76,15 +76,11 @@ class _ColromanoPageState extends State<ColromanoPage> {
                         'cuadrados.',
                     style: TextStyle(fontSize: 14)),
                 const SizedBox(height: 15),
-                // TextButton(
-                //     style: TextButton.styleFrom(
-                //       textStyle: const TextStyle(fontSize: 16),
-                //     ),
-                //     onPressed: () {
-                //       Navigator.push(context,
-                //           MaterialPageRoute(builder: (context) => MenuPage()));
-                //     },
-                //     child: const Text('Regresar')),
+                const ListTile(
+                  leading: Icon(Icons.pin_drop, size: 30, color: Colors.black,),
+                  title: Text("Ubicacion", style: TextStyle( fontSize: 16)),
+                  textColor: Colors.black,
+                ),
               ],
             ),
           ),

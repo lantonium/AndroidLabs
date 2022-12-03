@@ -5,11 +5,13 @@ import 'package:Androidlab/pages/machu_picchu.dart';
 import 'package:Androidlab/pages/tajmahal_page.dart';
 import 'package:Androidlab/pages/colromano_page.dart';
 import 'package:Androidlab/pages/piramegipto_page.dart';
+import 'package:Androidlab/pages/favoritos_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'about_page.dart';
 
-
 class MenuPage extends StatefulWidget {
+  const MenuPage({super.key});
+
 
   @override
   State<MenuPage> createState() => _MenuPageState();
@@ -18,6 +20,7 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
   final correo=FirebaseAuth.instance.currentUser?.email;
 
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -29,17 +32,17 @@ class _MenuPageState extends State<MenuPage> {
     return Drawer(
       child: ListView(
         children: [
-          DrawerHeader(
-              decoration: const BoxDecoration(
+          const DrawerHeader(
+              decoration: BoxDecoration(
                   color: Colors.blue
               ),
-              child: const Icon(Icons.account_circle_outlined, size: 120, color: Colors.white,)
+              child: Icon(Icons.account_circle_outlined, size: 120, color: Colors.white,)
           ),
           Column(
             children: [
               ListTile(
                 leading: const Icon(Icons.mail_lock_outlined, size: 30, color: Colors.black,),
-                title: Text((correo).toString(), style: TextStyle( fontSize: 16)),
+                title: Text((correo).toString(), style: const TextStyle( fontSize: 16)),
                 textColor: Colors.black,
               ),
               ListTile(
@@ -49,7 +52,7 @@ class _MenuPageState extends State<MenuPage> {
                 textColor: Colors.indigo,
                 onTap: (){
                   FirebaseAuth.instance.signOut();
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> PoiPage()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const PoiPage()));
                 },
               ),
               ListTile(
@@ -59,7 +62,7 @@ class _MenuPageState extends State<MenuPage> {
                 textColor: Colors.indigo,
                 onTap: (){
                   FirebaseAuth.instance.signOut();
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> TajmahalPage()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const TajmahalPage()));
                 },
               ),
               ListTile(
@@ -69,7 +72,7 @@ class _MenuPageState extends State<MenuPage> {
                 textColor: Colors.indigo,
                 onTap: (){
                   FirebaseAuth.instance.signOut();
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> ColromanoPage()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const ColromanoPage()));
                 },
               ),
               ListTile(
@@ -79,7 +82,7 @@ class _MenuPageState extends State<MenuPage> {
                 textColor: Colors.indigo,
                 onTap: (){
                   FirebaseAuth.instance.signOut();
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> PiramegiptoPage()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const PiramegiptoPage()));
                 },
               ),
               ListTile(
@@ -133,9 +136,9 @@ class menuInferior extends StatelessWidget {
       ],
       onTap: (indice){
         if(indice==0){
-          Navigator.push(context, MaterialPageRoute(builder: (contetx)=> MenuPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (contetx)=> const MenuPage()));
         }else if(indice==1){
-          Navigator.push(context, MaterialPageRoute(builder: (contetx)=> const PoiPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (contetx)=> const FavoritosPage()));
         }else{
           Navigator.push(context, MaterialPageRoute(builder: (contetx)=> const AboutPage()));
         }
