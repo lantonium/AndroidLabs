@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Androidlab/pages/login_page.dart';
+import 'package:androidlab/pages/login_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);

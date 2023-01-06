@@ -1,6 +1,6 @@
-import 'package:Androidlab/modelo/login_local.dart';
+import 'package:androidlab/modelo/login_local.dart';
 import 'package:flutter/material.dart';
-import 'package:Androidlab/pages/login_page.dart';
+import 'package:androidlab/pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return MaterialApp(
-      title: 'AndroidLab',
+      title: 'androidlab',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,

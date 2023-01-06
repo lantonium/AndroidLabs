@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:Androidlab/pages/register_page.dart';
-import 'package:Androidlab/pages/menu_page.dart';
+import 'package:androidlab/pages/register_page.dart';
+import 'package:androidlab/pages/menu_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 

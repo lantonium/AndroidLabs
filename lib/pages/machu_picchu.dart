@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Androidlab/pages/menu_page.dart';
+import 'package:androidlab/pages/menu_page.dart';
 
 class PoiPage extends StatefulWidget {
   const PoiPage({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class _PoiPageState extends State<PoiPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'AndroidLab',
+        title: 'androidlab',
         home: Scaffold(
           appBar: AppBar(
             title: const Text('Detalle Sitio Turistico'),

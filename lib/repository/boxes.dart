@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-import 'package:Androidlab/modelo/login_local.dart';
+import 'package:androidlab/modelo/login_local.dart';
 
 class Boxes{
 

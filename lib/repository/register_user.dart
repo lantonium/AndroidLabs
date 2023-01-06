@@ -1,6 +1,6 @@
 //import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:Androidlab/modelo/usuario_modelo.dart';
+import 'package:androidlab/modelo/usuario_modelo.dart';
 
 class Usuario_Registrar {
   Future<String?> registrarUsuario(String email, String password) async {

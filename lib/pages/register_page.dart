@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:Androidlab/modelo/usuario_modelo.dart';
-import 'package:Androidlab/pages/login_page.dart';
-import 'package:Androidlab/repository/register_user.dart';
+import 'package:androidlab/modelo/usuario_modelo.dart';
+import 'package:androidlab/pages/login_page.dart';
+import 'package:androidlab/repository/register_user.dart';
 //import 'dart:convert';
 
 class RegistrarPage extends StatefulWidget {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:Androidlab/pages/login_page.dart';
-import 'package:Androidlab/pages/machu_picchu.dart';
-import 'package:Androidlab/pages/tajmahal_page.dart';
-import 'package:Androidlab/pages/colromano_page.dart';
-import 'package:Androidlab/pages/piramegipto_page.dart';
-import 'package:Androidlab/pages/favoritos_page.dart';
+import 'package:androidlab/pages/login_page.dart';
+import 'package:androidlab/pages/machu_picchu.dart';
+import 'package:androidlab/pages/tajmahal_page.dart';
+import 'package:androidlab/pages/colromano_page.dart';
+import 'package:androidlab/pages/piramegipto_page.dart';
+import 'package:androidlab/pages/favoritos_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'about_page.dart';
 

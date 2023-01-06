@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Androidlab/pages/menu_page.dart';
+import 'package:androidlab/pages/menu_page.dart';
 
 
 class TajmahalPage extends StatefulWidget {
@@ -19,7 +19,7 @@ class _TajmahalPageState extends State<TajmahalPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'AndroidLab',
+      title: 'androidlab',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Detalle Sitio Turistico'),

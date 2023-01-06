@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Androidlab/pages/menu_page.dart';
+import 'package:androidlab/pages/menu_page.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'AndroidLab',
+      title: 'androidlab',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('About'),
@@ -35,7 +35,7 @@ class _AboutPageState extends State<AboutPage> {
             child: Column(
               children: <Widget>[
                 const SizedBox(height: 15),
-                const Text('AndroidLab',
+                const Text('androidlab',
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 25),
